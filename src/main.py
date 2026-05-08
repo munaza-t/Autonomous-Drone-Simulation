@@ -43,6 +43,7 @@ def run_simulation():
 
     # --- Step 1-3: Validate, Select Fleet, Visualize ---
     for step in range(1, 4):
+        time.sleep(1)
         if step == 1:
             # Simulated CSP Validation
             event_log.add_event(step, "CSP", "Layout validation PASSED. (4 rules checked)")
@@ -61,6 +62,7 @@ def run_simulation():
 
     # --- Step 4-6: Generate Deliveries and Compute Paths ---
     for step in range(4, 7):
+        time.sleep(1)
         if step == 4:
             event_log.add_event(step, "DEMAND", "Generating 3 delivery tasks based on density.")
             deliveries = [
@@ -83,17 +85,20 @@ def run_simulation():
 
     # --- Step 7-10: Move Drones ---
     for step in range(7, 11):
+        time.sleep(1)
         event_log.add_event(step, "SIM", "Drones moving along planned paths...")
         # (In a real integration, we'd update drone.location here)
 
     # --- Step 11: Activate No-Fly Cell ---
     step = 11
+    time.sleep(1)
     disruption_cell = (1, 5)
     grid.set_cell(disruption_cell[0], disruption_cell[1], no_fly=True)
     event_log.add_event(step, "ENV", f"CRITICAL: No-fly zone activated at {disruption_cell}!")
 
     # --- Step 12-14: Reroute ---
     for step in range(12, 15):
+        time.sleep(1)
         if step == 12:
             event_log.add_event(step, "DISRUPT", "Detection: Drone D1 path is BLOCKED.")
         elif step == 13:
@@ -105,6 +110,7 @@ def run_simulation():
 
     # --- Step 15-17: ML Forecast ---
     for step in range(15, 18):
+        time.sleep(1)
         if step == 15:
             event_log.add_event(step, "ML", "Running hourly demand forecast...")
         elif step == 16:
@@ -120,14 +126,17 @@ def run_simulation():
 
     # --- Step 18: Anomaly ---
     step = 18
+    time.sleep(1)
     event_log.add_event(step, "ML", "ANOMALY DETECTED: Drone D3 battery dropping 5x faster than expected!")
 
     # --- Step 19: Handle Anomaly ---
     step = 19
+    time.sleep(1)
     event_log.add_event(step, "SIM", "Safety protocol: Forcing Drone D3 to return to nearest hub.")
     
     # --- Step 20: Summary ---
     step = 20
+    time.sleep(1)
     event_log.add_event(step, "SYSTEM", "Simulation complete. Results: 2 Completed, 0 Failed, 1 Emergency Hub Return.")
     event_log.print_summary()
     
