@@ -51,7 +51,7 @@ autonomous-drone-sim/
 │       └── amazon_delivery.csv     # Delivery dataset (optional)
 ├── notebooks/
 │   ├── demand_forecasting.ipynb    # EDA + regression model training
-│   └── anomaly_classifier.ipynb   # Telemetry classification + evaluation
+│   └── anomaly_classifier.ipynb    # Telemetry classification + evaluation
 ├── results/
 │   ├── validation_report.txt
 │   ├── fleet_selection_result.txt
@@ -61,6 +61,8 @@ autonomous-drone-sim/
 │       ├── demand_heatmap.png
 │       ├── dashboard.png
 │       └── route_D1.png / route_D2.png / route_D3.png
+├── report/
+│   └── report_AI.pdf              # Final project report
 ├── app.py                  # Streamlit dashboard
 ├── requirements.txt
 └── README.md
