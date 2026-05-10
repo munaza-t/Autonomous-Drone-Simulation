@@ -1,0 +1,11 @@
+n_light: 0
+n_heavy: 8
+total_cost: 14400
+budget: 15000
+budget_remaining: 600
+coverage_pct: 61.16
+cost_spent_pct: 96.0
+score: 21.8716
+total_payload: 40.0
+total_demand: 65.4
+method: Brute-Force

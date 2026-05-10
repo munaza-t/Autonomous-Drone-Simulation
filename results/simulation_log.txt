@@ -1,0 +1,77 @@
+============================================================
+   AeroNet Lite — Simulation Log
+============================================================
+
+[Step 00] [  SYSTEM  ] AeroNet Lite Simulation Starting...
+[Step 00] [  SYSTEM  ]   Grid: 10×10
+[Step 00] [  SYSTEM  ]   Drones: 8
+[Step 00] [  SYSTEM  ]   Deliveries: 3
+[Step 01] [   CSP    ] Layout validation PASSED — 4 rules satisfied.
+[Step 02] [  ASSIGN  ] Assigning drones to deliveries...
+[Step 02] [  ASSIGN  ]   Drone D1 (heavy) → Delivery DEL3 ((4, 4)→(9, 2)) weight=4.5kg route=8 cells
+[Step 02] [  ASSIGN  ]   Drone D2 (heavy) → Delivery DEL1 ((2, 4)→(0, 6)) weight=1.2kg route=5 cells
+[Step 02] [  ASSIGN  ]   Drone D3 (heavy) → Delivery DEL2 ((1, 1)→(7, 3)) weight=0.5kg route=9 cells
+[Step 03] [    A*    ] A* routes already computed. Summary:
+[Step 03] [    A*    ]   DEL1: 5 cells ((2, 4) → (0, 6))
+[Step 03] [    A*    ]   DEL2: 9 cells ((1, 1) → (7, 3))
+[Step 03] [    A*    ]   DEL3: 8 cells ((4, 4) → (9, 2))
+[Step 04] [   SIM    ] Beginning drone movements...
+[Step 05] [   SIM    ] --- Tick 5 ---
+[Step 05] [   SIM    ]   Active drones: 3 | Completed this tick: 0
+[Step 06] [   SIM    ] --- Tick 6 ---
+[Step 06] [ ANOMALY  ]   ⚠ Drone D1 battery anomaly! Draining 25% this step!
+[Step 06] [   SIM    ]   Active drones: 3 | Completed this tick: 0
+[Step 07] [   SIM    ] --- Tick 7 ---
+[Step 07] [   SIM    ]   Active drones: 3 | Completed this tick: 0
+[Step 08] [   SIM    ] --- Tick 8 ---
+[Step 08] [   SIM    ]   Active drones: 3 | Completed this tick: 0
+[Step 09] [   SIM    ] --- Tick 9 ---
+[Step 09] [   SIM    ]   ✓ Drone D2 completed delivery DEL1 at (0, 6)
+[Step 09] [   SIM    ]   Active drones: 2 | Completed this tick: 1
+[Step 10] [   SIM    ] --- Tick 10 ---
+[Step 10] [   SIM    ]   Active drones: 2 | Completed this tick: 0
+[Step 11] [   ENV    ] 🚨 DISRUPTION: No-fly zone activated at (1, 5)! (Weather alert)
+[Step 12] [ DISRUPT  ] Checking for blocked drone paths...
+[Step 13] [ DISRUPT  ] Checking for blocked drone paths...
+[Step 13] [   SIM    ]   ✓ Drone D1 completed delivery DEL3 at (9, 2)
+[Step 14] [ DISRUPT  ] Checking for blocked drone paths...
+[Step 14] [   SIM    ]   ✓ Drone D3 completed delivery DEL2 at (7, 3)
+[Step 15] [ MONITOR  ] Battery and anomaly monitoring...
+[Step 15] [ MONITOR  ]   Drone D1: battery=40.0% status=idle location=(9, 2)
+[Step 15] [ MONITOR  ]   Drone D2: battery=75.0% status=idle location=(0, 6)
+[Step 15] [ MONITOR  ]   Drone D3: battery=55.0% status=idle location=(7, 3)
+[Step 15] [ MONITOR  ]   Drone D4: battery=100.0% status=idle location=(4, 4)
+[Step 15] [ MONITOR  ]   Drone D5: battery=100.0% status=idle location=(7, 1)
+[Step 15] [ MONITOR  ]   Drone D6: battery=100.0% status=idle location=(8, 3)
+[Step 15] [ MONITOR  ]   Drone D7: battery=100.0% status=idle location=(8, 6)
+[Step 15] [ MONITOR  ]   Drone D8: battery=100.0% status=idle location=(0, 7)
+[Step 16] [ MONITOR  ] Battery and anomaly monitoring...
+[Step 16] [ MONITOR  ]   Drone D1: battery=40.0% status=idle location=(9, 2)
+[Step 16] [ MONITOR  ]   Drone D2: battery=75.0% status=idle location=(0, 6)
+[Step 16] [ MONITOR  ]   Drone D3: battery=55.0% status=idle location=(7, 3)
+[Step 16] [ MONITOR  ]   Drone D4: battery=100.0% status=idle location=(4, 4)
+[Step 16] [ MONITOR  ]   Drone D5: battery=100.0% status=idle location=(7, 1)
+[Step 16] [ MONITOR  ]   Drone D6: battery=100.0% status=idle location=(8, 3)
+[Step 16] [ MONITOR  ]   Drone D7: battery=100.0% status=idle location=(8, 6)
+[Step 16] [ MONITOR  ]   Drone D8: battery=100.0% status=idle location=(0, 7)
+[Step 17] [ MONITOR  ] Battery and anomaly monitoring...
+[Step 17] [ MONITOR  ]   Drone D1: battery=40.0% status=idle location=(9, 2)
+[Step 17] [ MONITOR  ]   Drone D2: battery=75.0% status=idle location=(0, 6)
+[Step 17] [ MONITOR  ]   Drone D3: battery=55.0% status=idle location=(7, 3)
+[Step 17] [ MONITOR  ]   Drone D4: battery=100.0% status=idle location=(4, 4)
+[Step 17] [ MONITOR  ]   Drone D5: battery=100.0% status=idle location=(7, 1)
+[Step 17] [ MONITOR  ]   Drone D6: battery=100.0% status=idle location=(8, 3)
+[Step 17] [ MONITOR  ]   Drone D7: battery=100.0% status=idle location=(8, 6)
+[Step 17] [ MONITOR  ]   Drone D8: battery=100.0% status=idle location=(0, 7)
+[Step 18] [   SIM    ] --- Final movement tick 18 ---
+[Step 19] [   SIM    ] --- Final movement tick 19 ---
+[Step 20] [  SYSTEM  ] ========================================
+[Step 20] [  SYSTEM  ] SIMULATION COMPLETE
+[Step 20] [  SYSTEM  ]   Completed:  3
+[Step 20] [  SYSTEM  ]   Failed:     0
+[Step 20] [  SYSTEM  ]   Delayed:    0
+[Step 20] [  SYSTEM  ]   Reroutes:   0
+[Step 20] [  SYSTEM  ]   Anomalies:  3
+[Step 20] [  SYSTEM  ] ========================================
+
+============================================================
